@@ -59,7 +59,7 @@ public class PureClientApplication {
 			String token = client.getAccessToken().getTokenValue();
 
 			HttpHeaders headers = new HttpHeaders();
-			headers.setBasicAuth(token);
+			headers.setBearerAuth(token);
 
 			var resp=rest.exchange(
 					service2Url + "/data",
